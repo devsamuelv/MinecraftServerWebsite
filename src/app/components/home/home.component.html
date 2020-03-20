@@ -1,30 +1,31 @@
-<div class="card">
+<div *ngFor="let server of servers" class="card">
     <div class="card-content">
         <p class="title">
-            Dev Server
-            <span *ngIf="ui.mantainace == true;" class="tag is-warning user-tag">Mantainace</span>
-            <span *ngIf="ui.online == true;" class="tag is-success user-tag">Online</span>
-            <span *ngIf="ui.offline == true;" class="tag is-danger user-tag">Offline</span>
+            {{server.name}}
+            <span *ngIf="server.mantainace == true;" class="tag is-warning title-tag">Mantainace</span>
+            <span *ngIf="server.online == true;" class="tag is-success title-tag">Online</span>
+            <span *ngIf="server.offline == true;" class="tag is-danger title-tag">Offline</span>
+        </p>
+        <section class="section-title"></section>
+        <p class="subtitle top-subtitle">
+            <strong>Address: </strong> {{server.address}}
         </p>
         <p class="subtitle">
-            <strong>Address: </strong> Devserver.mcpro.io
-        </p>
-        <p class="subtitle">
-            <strong>Port: </strong> 41832
+            <strong>Port: </strong> {{server.port}}
         </p>
         <!-- section -->
         <hr>
         <!-- members -->
-        <p class="subtitle">
-            <strong>HackerSamuel  <span class="tag is-primary member-tag">Owner</span></strong>
+        <p class="subtitle bottom-subtitle">
+            <strong>{{server.owner}}  <span class="tag is-primary member-tag">Owner</span></strong>
         </p>
 
-        <p class="subtitle">
-            <strong>Sneakyninja7373  <span class="tag is-info member-tag">Admin</span></strong>
+        <p *ngFor="let admin of server.admin" class="subtitle bottom-subtitle">
+            <strong>{{admin}}  <span class="tag is-info member-tag">Admin</span></strong>
         </p>
-
-        <p class="subtitle">
+        <!-- 
+        <p class="subtitle bottom-subtitle">
             <strong>PlaneBadge  <span class="tag is-info member-tag">Admin</span></strong>
-        </p>
+        </p> -->
     </div>
 </div>

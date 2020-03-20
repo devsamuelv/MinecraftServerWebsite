@@ -11,6 +11,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from 'src/environments/environment';
+import { IssueReportComponent } from './components/issue-report/issue-report.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { environment } from 'src/environments/environment';
     NavComponent,
     HomeComponent,
     PageErrorComponent,
-    SettingsComponent
+    SettingsComponent,
+    IssueReportComponent
   ],
   imports: [
     BrowserModule,

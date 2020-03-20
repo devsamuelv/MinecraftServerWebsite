@@ -10,19 +10,26 @@ import { Observable } from 'rxjs';
 })
 export class UIService {
 
-  offline: boolean = false;
-  online: boolean = true;
-  mantainace: boolean = false;
+  private offline: boolean = false;
+  private online: boolean = true;
+  private mantainace: boolean = false;
 
-  // docRef: Observable<ServerDoc[]>;
+  private servers: Observable<ServerDoc[]>;
+  private serverCollection: AngularFirestoreCollection<ServerDoc>;
 
   constructor(private afs: AngularFirestore) {
 
-    // this.docRef = afs.collection("minecraftServerStats/devserver").snapshotChanges().pipe(map(actions => actions.map(a => {
-    //   const data = a.payload.doc.data() as ServerDoc;
-    //   data.id = a.payload.doc.id;
-    //   return data;
-    // })))
+    this.serverCollection = afs.collection("minecraftservers");
+
+    this.servers = this.serverCollection.snapshotChanges().pipe(map(actions => actions.map(a => {
+      const data = a.payload.doc.data() as ServerDoc;
+      data.id = a.payload.doc.id;
+      return data;
+    })))
+  }
+
+  getServers() {
+    return this.servers;
   }
 
   setOnline() {
