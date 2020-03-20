@@ -6,3 +6,9 @@ export interface ServerDoc {
     offline: boolean,
     online: boolean
 }
+
+export interface FormDoc {
+    id?,
+    serverName: string,
+    serverInfo: string
+}

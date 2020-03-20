@@ -1,3 +1,13 @@
+<article [@msgAni] *ngIf="msg == true;" class="message is-success msg">
+    <div class="message-header">
+        <p>Message</p>
+        <button (click)="hideMsg()" class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+        Issue Sent!
+    </div>
+</article>
+
 <div class="card">
     <div class="card-content">
         <p style="text-align: center;" class="title">
@@ -8,33 +18,29 @@
             Which Server Has Incorrect Info
         </p>
 
+        <div class="field">
+            <div class="control">
+                <input [(ngModel)]="ServerName" class="input is-info is-rounded" type="text" placeholder="Server Name">
+            </div>
+        </div>
+
+        <!-- border -->
         <hr>
 
         <p class="subtitle">
             What is Incorrect?
         </p>
 
-        <label class="checkbox">
-            <input type="checkbox">
-            Server Name
-        </label>
+        <section></section>
+
+        <div class="field">
+            <div class="control">
+                <input [(ngModel)]="ServerIssue" class="input is-info is-rounded" type="text" placeholder="Incorrect Data">
+            </div>
+        </div>
 
         <section></section>
 
-        <label class="checkbox">
-            <input type="checkbox">
-            Server Port
-        </label>
-
-        <section></section>
-
-        <label class="checkbox">
-            <input type="checkbox">
-            Server Status
-        </label>
-
-        <section></section>
-
-        <button class="button is-info">Submit</button>
+        <button (click)="submit()" class="button is-info">Submit</button>
     </div>
 </div>
