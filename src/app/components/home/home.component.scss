@@ -1,0 +1,37 @@
+.user-tag {
+    float: right;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.title-tag {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.member-tag {
+    float: right;
+}
+
+.label-home {
+    float: left;
+}
+
+@media screen and (max-width: 991px) {
+    .member-tag {
+        float: right;
+    }
+    .bottom-subtitle {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    .user-tag {
+        float: left;
+    }
+    .top-subtitle {
+        margin-top: 5vh;
+    }
+    .card-content {
+        padding-bottom: 3vh;
+    }
+}

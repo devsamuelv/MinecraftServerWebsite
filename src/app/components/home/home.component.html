@@ -1,0 +1,31 @@
+<div *ngFor="let server of servers" class="card">
+    <div class="card-content">
+        <p class="title">
+            {{server.name}}
+            <span *ngIf="server.mantainace == true;" class="tag is-warning title-tag">Mantainace</span>
+            <span *ngIf="server.online == true;" class="tag is-success title-tag">Online</span>
+            <span *ngIf="server.offline == true;" class="tag is-danger title-tag">Offline</span>
+        </p>
+        <section class="section-title"></section>
+        <p class="subtitle top-subtitle">
+            <strong>Address: </strong> {{server.address}}
+        </p>
+        <p class="subtitle">
+            <strong>Port: </strong> {{server.port}}
+        </p>
+        <!-- section -->
+        <hr>
+        <!-- members -->
+        <p class="subtitle bottom-subtitle">
+            <strong>{{server.owner}}  <span class="tag is-primary member-tag">Owner</span></strong>
+        </p>
+
+        <p *ngFor="let admin of server.admin" class="subtitle bottom-subtitle">
+            <strong>{{admin}}  <span class="tag is-info member-tag">Admin</span></strong>
+        </p>
+        <!-- 
+        <p class="subtitle bottom-subtitle">
+            <strong>PlaneBadge  <span class="tag is-info member-tag">Admin</span></strong>
+        </p> -->
+    </div>
+</div>
