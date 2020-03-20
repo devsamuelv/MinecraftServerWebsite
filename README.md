@@ -2,7 +2,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)  [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) ![Angular CI](https://github.com/DevSamuelV/MinecraftServerWebsite/workflows/Angular%20CI/badge.svg?branch=New-Features)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) ![Angular CI](https://github.com/DevSamuelV/MinecraftServerWebsite/workflows/Angular%20CI/badge.svg?branch=New-Features) [![Netlify Status](https://api.netlify.com/api/v1/badges/e52e0398-a666-429b-91d4-8b0d9995d0ef/deploy-status)](https://app.netlify.com/sites/minerealm/deploys)
 
 
 
