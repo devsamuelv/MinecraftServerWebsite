@@ -10,9 +10,14 @@
         <p class="subtitle top-subtitle">
             <strong>Address: </strong> {{server.address}}
         </p>
-        <p class="subtitle">
+        <p *ngIf="server.port > 0;else java" class="subtitle">
             <strong>Port: </strong> {{server.port}}
         </p>
+        <ng-template #java>
+            <p class="subtitle">
+                <strong>Type: </strong>Java
+            </p>
+        </ng-template>
         <!-- section -->
         <hr>
         <!-- members -->
@@ -23,9 +28,5 @@
         <p *ngFor="let admin of server.admin" class="subtitle bottom-subtitle">
             <strong>{{admin}}  <span class="tag is-info member-tag">Admin</span></strong>
         </p>
-        <!-- 
-        <p class="subtitle bottom-subtitle">
-            <strong>PlaneBadge  <span class="tag is-info member-tag">Admin</span></strong>
-        </p> -->
     </div>
 </div>
