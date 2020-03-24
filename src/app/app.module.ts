@@ -14,6 +14,7 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from 'src/environments/environment';
 import { IssueReportComponent } from './components/issue-report/issue-report.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { IssueReportComponent } from './components/issue-report/issue-report.com
     HomeComponent,
     PageErrorComponent,
     SettingsComponent,
-    IssueReportComponent
+    IssueReportComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
