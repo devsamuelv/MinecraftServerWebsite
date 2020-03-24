@@ -13,7 +13,7 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a routerLink="/home" class="navbar-item">
+            <a [routerLink]="['/home']" class="navbar-item">
           Home
         </a>
 
@@ -27,7 +27,7 @@
           </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item">
+                    <a [routerLink]="['/about']" class="navbar-item">
               About
             </a>
                     <!-- <a class="navbar-item">
