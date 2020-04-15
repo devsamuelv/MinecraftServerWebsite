@@ -33,7 +33,8 @@ export class UIService {
   public async sendData(ServerName: string, ServerIssue: string) {
     const formdata: FormDoc = {
       serverName: ServerName,
-      serverInfo: ServerIssue
+      serverInfo: ServerIssue,
+      time: new Date().getUTCDate.toString()
     }
 
     await this.formsCollection.add(formdata);

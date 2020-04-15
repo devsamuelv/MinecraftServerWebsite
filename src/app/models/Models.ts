@@ -10,5 +10,6 @@ export interface ServerDoc {
 export interface FormDoc {
     id?,
     serverName: string,
-    serverInfo: string
+    serverInfo: string,
+    time: string
 }
